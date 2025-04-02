@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Ma Boutique</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        #map { height: 400px; width: 100%; }
+
+        .div{
+            background-color: rgb(253, 249, 244);
+            border-radius: 20px;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ma Boutique</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Acceuil.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Nos_produit.html">Produits</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacte.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Contact -->
+    <div class="container mt-5 div">
+        <h2 class="section-title">Contactez-nous</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Informations de la Boutique</h4>
+                <p><strong>Nom :</strong> Mr The</p>
+                <p><strong>Adresse :</strong> </p>
+                <p><strong>Téléphone :</strong> </p>
+                <p><strong>Email :</strong> </p>
+                <p><strong>Horaires :</strong> Lundi - Samedi : 9h - 19h</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Formulaire de Contact</h4>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Offres d'emploi -->
+    <div class="container mt-5 div ">
+        <h2 class="section-title">Offres d'emploi</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Vendeur/Vendeuse</h5>
+                        <p class="card-text">Nous recherchons un(e) vendeur(se) motivé(e) pour rejoindre notre équipe.</p>
+                        <p><strong>Contrat :</strong> CDI</p>
+                        <p><strong>Expérience :</strong> 1 an minimum</p>
+                        <button class="btn btn-success">Postuler</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Caissier/Caissière</h5>
+                        <p class="card-text">Nous cherchons un(e) caissier(e) pour un poste à temps partiel.</p>
+                        <p><strong>Contrat :</strong> CDD</p>
+                        <p><strong>Expérience :</strong> Débutant accepté</p>
+                        <button class="btn btn-success">Postuler</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Responsable de magasin</h5>
+                        <p class="card-text">Nous recrutons un(e) responsable de magasin avec expérience.</p>
+                        <p><strong>Contrat :</strong> CDI</p>
+                        <p><strong>Expérience :</strong> 3 ans minimum</p>
+                        <button class="btn btn-success">Postuler</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <!-- maps -->
+    <div class="container div " >
+        <h2>Notre localisation</h2>
+    <div id="map"></div>
+   
+    <script>
+        var map = L.map('map').setView([6.207838, 1.182455], 13); // Coordonnées de Lomé, Togo
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        var marker = L.marker([6.1319, 1.2228]).addTo(map).bindPopup("Lomé, Togo").openPopup();
+    </script>
+
+
+    </div>
+    
+
+    
+    
+    <!-- Pied de page -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Ma Boutique. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
