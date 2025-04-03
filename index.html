@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mr The</title>
+    <title>Monsieur Thé</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         .carousel-inner img {
             height: 400px;
             object-fit: cover;
         }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+        transition: transform 0.3s ease-in-out; /* Animation fluide */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombre au survol */
+}
+
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Mr The</a>
+            <a class="navbar-brand" href="index.html">Monsieur Thé</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -60,7 +68,7 @@
             <h2 class="text-center mb-4">Nos Meilleurs Bubble Teas</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card  card-hover ">
                         <img src="images/imageBB2.jpg" class="card-img-top" alt="Thé au lait classique">
                         <div class="card-body">
                             <h5 class="card-title">Thé au lait classique</h5>
@@ -70,7 +78,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card  card-hover ">
                         <img src="images/imageBB4.jpg" class="card-img-top" alt="Bubble Tea aux fruits">
                         <div class="card-body">
                             <h5 class="card-title">Bubble Tea aux fruits</h5>
@@ -80,7 +88,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card  card-hover ">
                         <img src="images/imageBB6.jpg" class="card-img-top" alt="Matcha Bubble Tea">
                         <div class="card-body">
                             <h5 class="card-title">Matcha Bubble Tea</h5>
@@ -89,6 +97,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="card  card-hover ">
+                        <img src="images/imageBB6.jpg" class="card-img-top" alt="Matcha Bubble Tea">
+                        <div class="card-body">
+                            <h5 class="card-title">Matcha Bubble Tea</h5>
+                            <p class="card-text">Un délicieux thé matcha avec des perles de tapioca.</p>
+                            <p class="fw-bold">Prix: 6.50€</p>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>

@@ -8,12 +8,47 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         .card {
+            width: 350px;  /* Largeur fixe */
+            height: 300px; /* Hauteur fixe */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between; /* Garde une bonne répartition du contenu */
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden; /* Empêche le débordement */
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transform: translateY(50px);
             opacity: 0;
             transition: transform 0.5s ease-out, opacity 0.5s ease-out;
         }
         .card:hover {
             transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+        }
+        .card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        }
+        .card:hover img {
+    transform: scale(1.1); /* Effet zoom sur l'image */
+        }
+
+        /* Animation du texte */
+        .card-content {
+            flex-grow: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+
+        .card:hover .card-content {
+            color: #007bff; /* Change la couleur du texte */
         }
         .fade-in {
             animation: fadeInUp 1s ease-out forwards;
@@ -28,6 +63,13 @@
                 transform: translateY(0);
             }
         }
+        .image-uniform {
+        width: 100%; /* Ajuste la largeur selon ton besoin */
+        height: 50%; /* Ajuste la hauteur selon ton besoin */
+        object-fit: cover; /* Garde un bon cadrage sans déformation */
+       
+        }
+        
     </style>
 </head>
 <body>
@@ -47,13 +89,13 @@
         </div>
     </nav>
     
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Nos Meilleurs Bubble Teas</h2>
+    <section class="py-4 ">
+        <div class="container ">
+            <h2 class="text-center mb-4 ">Nos Meilleurs Bubble Teas</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card fade-in">
-                        <img src="images/imageBB2.jpg" class="card-img-top" alt="Thé au lait classique">
+                        <img src="images/imageBB2.jpg" class="card-img-top image-uniform " alt="Thé au lait classique">
                         <div class="card-body">
                             <h5 class="card-title">Thé au lait classique</h5>
                             <p class="card-text">Un mélange parfait de thé noir et de lait avec des perles de tapioca.</p>
@@ -63,7 +105,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card fade-in" style="animation-delay: 0.3s;">
-                        <img src="images/imageBB4.jpg" class="card-img-top" alt="Bubble Tea aux fruits">
+                        <img src="images/imageBB4.jpg" class="card-img-top image-uniform " alt="Bubble Tea aux fruits">
                         <div class="card-body">
                             <h5 class="card-title">Bubble Tea aux fruits</h5>
                             <p class="card-text">Une explosion de fruits frais et perles de saveurs.</p>
@@ -73,10 +115,100 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card fade-in" style="animation-delay: 0.6s;">
-                        <img src="images/imageBB6.jpg" class="card-img-top" alt="Matcha Bubble Tea">
+                        <img src="images/imageBB6.jpg" class="card-img-top image-uniform " alt="Matcha Bubble Tea">
                         <div class="card-body">
                             <h5 class="card-title">Matcha Bubble Tea</h5>
                             <p class="card-text">Un délicieux thé matcha avec des perles de tapioca.</p>
+                            <p class="fw-bold">Prix: 1200 XOF</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card fade-in" style="animation-delay: 0.6s;">
+                        <img src="images/Kawaii Bubble .jpg" class="card-img-top image-uniform " alt="Matcha Bubble Tea">
+                        <div class="card-body">
+                            <h5 class="card-title">Kawaii Bubble</h5>
+                            <p class="card-text">Lait fraise pastel avec perles sucrées à la framboise.</p>
+                            <p class="fw-bold">Prix: 1200 XOF</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card fade-in" style="animation-delay: 0.6s;">
+                        <img src="images/Boba no Yume .jpg" class="card-img-top image-uniform " alt="Matcha Bubble Tea">
+                        <div class="card-body">
+                            <h5 class="card-title">Boba no Yume</h5>
+                            <p class="card-text">Thé bleu magique qui change de couleur avec perles au litchi.</p>
+                            <p class="fw-bold">Prix: 1200 XOF</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card fade-in" style="animation-delay: 0.6s;">
+                        <img src="images/Coconut Pop.jpg" class="card-img-top image-uniform " alt="Matcha Bubble Tea">
+                        <div class="card-body">
+                            <h5 class="card-title">Coconut Pop</h5>
+                            <p class="card-text">Lait de coco vanillé avec perles au sirop d’érable.</p>
+                            <p class="fw-bold">Prix: 1200 XOF</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card fade-in" style="animation-delay: 0.6s;">
+                        <img src="images/Mango Boba .jpg" class="card-img-top image-uniform " alt="Matcha Bubble Tea">
+                        <div class="card-body">
+                            <h5 class="card-title">Mango Boba</h5>
+                            <p class="card-text"> Thé noir glacé à la mangue avec perles fruitées.</p>
+                            <p class="fw-bold">Prix: 1200 XOF</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card fade-in" style="animation-delay: 0.6s;">
+                        <img src="images/Taro Twist.jpg" class="card-img-top image-uniform" alt="Matcha Bubble Tea">
+                        <div class="card-body">
+                            <h5 class="card-title">Taro Twist</h5>
+                            <p class="card-text">Thé au lait et taro, doux et légèrement noisetté.</p>
+                            <p class="fw-bold">Prix: 1200 XOF</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card fade-in" style="animation-delay: 0.6s;">
+                        <img src="images/Matcha Bliss.jpg" class="card-img-top image-uniform " alt="Matcha Bubble Tea">
+                        <div class="card-body">
+                            <h5 class="card-title">Matcha Bliss</h5>
+                            <p class="card-text">ait crémeux au matcha avec perles légèrement sucrées.</p>
+                            <p class="fw-bold">Prix: 1200 XOF</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card fade-in" style="animation-delay: 0.6s;">
+                        <img src="images/Litchi Pearl .jpg" class="card-img-top image-uniform " alt="Matcha Bubble Tea">
+                        <div class="card-body">
+                            <h5 class="card-title">Litchi Pearl</h5>
+                            <p class="card-text">Thé blanc au litchi et perles de tapioca infusées à la rose.</p>
+                            <p class="fw-bold">Prix: 1200 XOF</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card fade-in" style="animation-delay: 0.6s;">
+                        <img src="images/Bubble Zen.jpg" class="card-img-top image-uniform " alt="Matcha Bubble Tea">
+                        <div class="card-body">
+                            <h5 class="card-title">Bubble Zen</h5>
+                            <p class="card-text">Thé vert au jasmin avec perles d’agar-agar et touche de yuzu.</p>
+                            <p class="fw-bold">Prix: 1200 XOF</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card fade-in" style="animation-delay: 0.6s;">
+                        <img src="images/" class="card-img-top" alt="Matcha Bubble Tea">
+                        <div class="card-body">
+                            <h5 class="card-title">Perle Sucrée</h5>
+                            <p class="card-text">Thé au lait onctueux avec perles de tapioca caramélisées et miel.</p>
                             <p class="fw-bold">Prix: 1200 XOF</p>
                         </div>
                     </div>
