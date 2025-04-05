@@ -6,6 +6,8 @@
     <title>Contact - Ma Boutique</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <style>
         .section-title {
@@ -46,30 +48,52 @@
             border-radius: 9px;
             background-color: #ffffff;
         }
+        .blam{
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+        }
+        .bloom{
+            padding: 30px;
+        }
     </style>
 </head>
 <body>
 
     <!-- Barre de navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Ma Boutique</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <div class="container d-flex align-items-center justify-content-between">
+            
+            <!-- Bouton de changement de thème aligné à gauche -->
+            <button id="theme-toggle" class="btn btn-outline-light me-3">🌙 Mode sombre</button>
+    
+            <!-- Logo + Nom -->
+            <img src="images/logo1.jpg" class="blam me-3" alt="">
+            <a class="navbar-brand" href="index.html">Monsieur Thé</a>
+    
+            <!-- Bouton pour le menu responsive -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> 
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <button id="theme-toggle" class="boll" >🌙 Mode sombre</button>
+    
+            <!-- Liens de navigation -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Nos_produit.html">Produits</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contacte.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Nos_produit.html">Nos Produits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacte.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Connection.html">
+                            <i class="fas fa-user"></i> Connexion
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Section Contact -->
-    <div class="container mt-5 div card vim">
+    <div class="container mt-5 div card vim bloom">
         <h2 class="section-title">Contactez-nous</h2>
         <div class="row">
             <div class="col-md-6">
@@ -102,7 +126,7 @@
     </div>
 
     <!-- Section Offres d'emploi -->
-    <div class="container mt-5 div card vim ">
+    <div class="container mt-5 div card vim bloom ">
         <h2 class="section-title">Offres d'emploi</h2>
         <div class="row">
             <div class="col-md-4">
@@ -141,7 +165,7 @@
         </div>
     </div><br>
     <!-- maps -->
-    <div class="container div card vim" >
+    <div class="container div card vim bloom" >
         <h2>Notre localisation</h2>
     <div id="map"></div>
 
@@ -180,7 +204,7 @@
                     <ul class="list-unstyled">
                         <li><a href="index.html" class="text-light text-decoration-none">Accueil</a></li>
                         <li><a href="Nos_produit.html" class="text-light text-decoration-none">Nos Produits</a></li>
-                        <li><a href="contacte.html" class="text-light text-decoration-none">Contate</a></li>
+                        <li><a href="contacte.html" class="text-light text-decoration-none">Contact</a></li>
                     </ul>
                 </div>
     
@@ -201,17 +225,29 @@
                 </div>
             </div>
     
+            <!-- Réseaux sociaux (DÉPLACÉ ICI, au-dessus du <hr>) -->
+            <div class="text-center my-4">
+                <a href="https://facebook.com" target="_blank" class="text-light me-3">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="text-light me-3">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://wa.me/22898172121" target="_blank" class="text-light">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                </a>
+            </div>
+    
             <!-- Ligne de séparation -->
             <hr class="bg-light">
     
-            <!-- Réseaux sociaux -->
+            <!-- Crédit ou mentions (optionnel) -->
             <div class="text-center">
-                <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="#" class="text-light"><i class="fab fa-whatsapp fa-2x"></i></a>
+                <small>&copy; 2025 Monsieur Thé - Tous droits réservés</small>
             </div>
         </div>
     </footer>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>

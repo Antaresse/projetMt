@@ -7,9 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
     <style>
         .card{
             transition: background 0.3s, color 0.3s
+            
         }
                 /* Style sombre appliqué si body a la classe dark-mode */
         body.dark-mode .card {
@@ -36,8 +41,15 @@
             color: #ffffff;
         }
         button{
-            background-color: #2b2b2b;
+            background-color: #ffffff;
             border-radius: 9px;
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        button:hover{
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
         }
         .carousel {
         position: relative;
@@ -82,8 +94,18 @@
             
         }
 
-        .lol{
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombre au survol */
+        
+        .blam{
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+        }
+        .yes{
+            font-family: 'Poppins', sans-serif;
+        }
+        .pom{
+            background-color: rgb(253, 249, 244) ;
+            border: none;
         }
 
 
@@ -92,12 +114,21 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
+        <div class="container d-flex align-items-center justify-content-between">
+            
+            <!-- Bouton de changement de thème aligné à gauche -->
+            <button id="theme-toggle" class="btn btn-outline-light me-3">🌙 Mode sombre</button>
+    
+            <!-- Logo + Nom -->
+            <img src="images/logo1.jpg" class="blam me-3" alt="">
             <a class="navbar-brand" href="index.html">Monsieur Thé</a>
+    
+            <!-- Bouton pour le menu responsive -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> 
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <button id="theme-toggle">🌙 Mode sombre</button>
+    
+            <!-- Liens de navigation -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
@@ -113,16 +144,17 @@
         </div>
     </nav>
     
+    
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="images/mainmrthe.jpg" class="d-block w-100" alt="Bubble Tea">
             </div>
             <div class="carousel-item">
-                <img src="images/imageCarr2.jpg" class="d-block w-100" alt="Bubble Tea">
+                <img src="images/Wall2.jpg" class="d-block w-100" alt="Bubble Tea">
             </div>
             <div class="carousel-item">
-                <img src="images/imageCarr3.jpg" class="d-block w-100" alt="Bubble Tea">
+                <img src="images/gaufre2.jpg" class="d-block w-100" alt="Bubble Tea">
             </div>
         </div>
     
@@ -136,7 +168,7 @@
     
         <!-- Voile sombre avec texte -->
         <div class="carousel-overlay  ">
-            <h1 class="fw-bold fs-1">Bienvenue chez Monsieur Thé</h1>
+            <h1 class="fw-bold fs-1 yes">Bienvenue chez Monsieur Thé</h1>
         </div>
     </div>
     <br>
@@ -146,13 +178,13 @@
                 <h2 class="text-end me-9">Notre histoire</h2>
                 
                 <!-- Le bloc encadré contenant image + paragraphe -->
-                <div class="card p-4">
+                <div class="card p-4 pom ">
                     <div class="row">
                         <div class="col-md-6">
                             <img src="images/logo1.jpg" alt="log" class="kevin img-fluid">
                         </div>
                         <div class="col-md-6 d-flex align-items-center">
-                            <p class="fs-4 lol m-0">
+                            <p class="fs-4  m-0">
                                 Monsieur Thé est né de la passion de Théodore pour le thé et les plantes locales du <br>Togo. Après des années de recherche, il a créé une marque unique qui mêle <br> tradition et bien-être, en offrant des thés aux saveurs authentiques et des bienfaits <br> naturels. Aujourd’hui, Monsieur Thé est un symbole de qualité, de convivialité et de <br> respect des traditions togolaises, proposant une expérience de thé inégalée pour <br> tous ceux qui recherchent le goût et la santé dans chaque tasse.
                             </p>
                         </div>
@@ -175,7 +207,7 @@
                         <img src="images/imageBB2.jpg" class="card-img-top" alt="Thé au lait classique">
                         <div class="card-body">
                             <h5 class="card-title">Thé au lait classique</h5>
-                            <p class="card-text">Un mélange parfait de thé noir et de lait avec des perles de tapioca.</p>
+                            <p class="card-text">Un mélange parfait de thé noir et de lait  .</p>
                             <p class="fw-bold">Prix: 5€</p>
                         </div>
                     </div>
@@ -222,7 +254,7 @@
                     <ul class="list-unstyled">
                         <li><a href="index.html" class="text-light text-decoration-none">Accueil</a></li>
                         <li><a href="Nos_produit.html" class="text-light text-decoration-none">Nos Produits</a></li>
-                        <li><a href="contacte.html" class="text-light text-decoration-none">Contate</a></li>
+                        <li><a href="contacte.html" class="text-light text-decoration-none">Contact</a></li>
                     </ul>
                 </div>
     
@@ -243,17 +275,29 @@
                 </div>
             </div>
     
+            <!-- Réseaux sociaux (DÉPLACÉ ICI, au-dessus du <hr>) -->
+            <div class="text-center my-4">
+                <a href="https://facebook.com" target="_blank" class="text-light me-3">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="text-light me-3">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://wa.me/22898172121" target="_blank" class="text-light">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                </a>
+            </div>
+    
             <!-- Ligne de séparation -->
             <hr class="bg-light">
     
-            <!-- Réseaux sociaux -->
+            <!-- Crédit ou mentions (optionnel) -->
             <div class="text-center">
-                <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="#" class="text-light"><i class="fab fa-whatsapp fa-2x"></i></a>
+                <small>&copy; 2025 Monsieur Thé - Tous droits réservés</small>
             </div>
         </div>
     </footer>
+    
     
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
